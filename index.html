@@ -18,6 +18,13 @@
 
     .full-gallery{background:#11100f}
     .full-gallery .section-head{margin-bottom:38px}
+
+    .gallery-filters{display:flex;flex-wrap:wrap;gap:10px;margin:0 0 28px}
+    .filter-btn{appearance:none;border:1px solid rgba(238,232,220,.22);background:transparent;color:#c9c0b4;padding:10px 15px;font:500 .62rem var(--sans);letter-spacing:.09em;text-transform:uppercase;cursor:pointer;transition:.22s}
+    .filter-btn:hover,.filter-btn.active{border-color:var(--gold);background:var(--gold);color:#17130e}
+    .filter-btn span{opacity:.7;margin-left:5px}
+    .gallery-card[hidden]{display:none}
+    @media(max-width:760px){.gallery-filters{gap:7px;margin-bottom:20px}.filter-btn{padding:9px 11px;font-size:.57rem}}
     .gallery-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px}
     .gallery-card{position:relative;display:block;padding:0;border:0;background:#211e1a;overflow:hidden;cursor:pointer;aspect-ratio:4/5;text-align:left}
     .gallery-card img{width:100%;height:100%;object-fit:cover;transition:transform .65s,opacity .35s}
@@ -70,117 +77,125 @@
         <div><div class="eyebrow">The complete collection</div><h2 class="serif">Our <em>Gallery.</em></h2></div>
         <p>Setiap foto menyimpan cerita. Jelajahi koleksi momen yang kami abadikan melalui lensa LUMINEXA.</p>
       </div>
+      <div class="gallery-filters" role="group" aria-label="Filter kategori galeri">
+        <button class="filter-btn active" type="button" data-filter="all" aria-pressed="true">All stories <span>36</span></button>
+        <button class="filter-btn" type="button" data-filter="portrait" aria-pressed="false">Couple &amp; Portrait</button>
+        <button class="filter-btn" type="button" data-filter="outdoor" aria-pressed="false">Outdoor &amp; Prewedding</button>
+        <button class="filter-btn" type="button" data-filter="family" aria-pressed="false">Family &amp; Celebration</button>
+        <button class="filter-btn" type="button" data-filter="details" aria-pressed="false">Details &amp; Moments</button>
+        <button class="filter-btn" type="button" data-filter="behind" aria-pressed="false">Candid &amp; Behind the Scenes</button>
+      </div>
       <div class="gallery-grid">
-        <button class="gallery-card" type="button" data-photo="gallery-01.jpg" aria-label="Perbesar foto portofolio 01">
+        <button class="gallery-card" type="button" data-category="outdoor" data-photo="gallery-01.jpg" aria-label="Perbesar foto portofolio 01">
           <img loading="lazy" src="gallery-01.jpg" alt="Foto portofolio wedding LUMINEXA 01">
         </button>
-        <button class="gallery-card" type="button" data-photo="gallery-02.jpg" aria-label="Perbesar foto portofolio 02">
+        <button class="gallery-card" type="button" data-category="portrait" data-photo="gallery-02.jpg" aria-label="Perbesar foto portofolio 02">
           <img loading="lazy" src="gallery-02.jpg" alt="Foto portofolio wedding LUMINEXA 02">
         </button>
-        <button class="gallery-card" type="button" data-photo="gallery-03.jpg" aria-label="Perbesar foto portofolio 03">
+        <button class="gallery-card" type="button" data-category="family" data-photo="gallery-03.jpg" aria-label="Perbesar foto portofolio 03">
           <img loading="lazy" src="gallery-03.jpg" alt="Foto portofolio wedding LUMINEXA 03">
         </button>
-        <button class="gallery-card" type="button" data-photo="gallery-04.jpg" aria-label="Perbesar foto portofolio 04">
+        <button class="gallery-card" type="button" data-category="outdoor" data-photo="gallery-04.jpg" aria-label="Perbesar foto portofolio 04">
           <img loading="lazy" src="gallery-04.jpg" alt="Foto portofolio wedding LUMINEXA 04">
         </button>
-        <button class="gallery-card" type="button" data-photo="gallery-05.jpg" aria-label="Perbesar foto portofolio 05">
+        <button class="gallery-card" type="button" data-category="portrait" data-photo="gallery-05.jpg" aria-label="Perbesar foto portofolio 05">
           <img loading="lazy" src="gallery-05.jpg" alt="Foto portofolio wedding LUMINEXA 05">
         </button>
-        <button class="gallery-card" type="button" data-photo="gallery-06.jpg" aria-label="Perbesar foto portofolio 06">
+        <button class="gallery-card" type="button" data-category="behind" data-photo="gallery-06.jpg" aria-label="Perbesar foto portofolio 06">
           <img loading="lazy" src="gallery-06.jpg" alt="Foto portofolio wedding LUMINEXA 06">
         </button>
-        <button class="gallery-card" type="button" data-photo="gallery-07.jpg" aria-label="Perbesar foto portofolio 07">
+        <button class="gallery-card" type="button" data-category="family" data-photo="gallery-07.jpg" aria-label="Perbesar foto portofolio 07">
           <img loading="lazy" src="gallery-07.jpg" alt="Foto portofolio wedding LUMINEXA 07">
         </button>
-        <button class="gallery-card" type="button" data-photo="gallery-08.jpg" aria-label="Perbesar foto portofolio 08">
+        <button class="gallery-card" type="button" data-category="portrait" data-photo="gallery-08.jpg" aria-label="Perbesar foto portofolio 08">
           <img loading="lazy" src="gallery-08.jpg" alt="Foto portofolio wedding LUMINEXA 08">
         </button>
-        <button class="gallery-card" type="button" data-photo="gallery-09.jpg" aria-label="Perbesar foto portofolio 09">
+        <button class="gallery-card" type="button" data-category="outdoor" data-photo="gallery-09.jpg" aria-label="Perbesar foto portofolio 09">
           <img loading="lazy" src="gallery-09.jpg" alt="Foto portofolio wedding LUMINEXA 09">
         </button>
-        <button class="gallery-card" type="button" data-photo="gallery-10.jpg" aria-label="Perbesar foto portofolio 10">
+        <button class="gallery-card" type="button" data-category="portrait" data-photo="gallery-10.jpg" aria-label="Perbesar foto portofolio 10">
           <img loading="lazy" src="gallery-10.jpg" alt="Foto portofolio wedding LUMINEXA 10">
         </button>
-        <button class="gallery-card" type="button" data-photo="gallery-11.jpg" aria-label="Perbesar foto portofolio 11">
+        <button class="gallery-card" type="button" data-category="portrait" data-photo="gallery-11.jpg" aria-label="Perbesar foto portofolio 11">
           <img loading="lazy" src="gallery-11.jpg" alt="Foto portofolio wedding LUMINEXA 11">
         </button>
-        <button class="gallery-card" type="button" data-photo="gallery-12.jpg" aria-label="Perbesar foto portofolio 12">
+        <button class="gallery-card" type="button" data-category="portrait" data-photo="gallery-12.jpg" aria-label="Perbesar foto portofolio 12">
           <img loading="lazy" src="gallery-12.jpg" alt="Foto portofolio wedding LUMINEXA 12">
         </button>
-        <button class="gallery-card" type="button" data-photo="gallery-13.jpg" aria-label="Perbesar foto portofolio 13">
+        <button class="gallery-card" type="button" data-category="details" data-photo="gallery-13.jpg" aria-label="Perbesar foto portofolio 13">
           <img loading="lazy" src="gallery-13.jpg" alt="Foto portofolio wedding LUMINEXA 13">
         </button>
-        <button class="gallery-card" type="button" data-photo="gallery-14.jpg" aria-label="Perbesar foto portofolio 14">
+        <button class="gallery-card" type="button" data-category="portrait" data-photo="gallery-14.jpg" aria-label="Perbesar foto portofolio 14">
           <img loading="lazy" src="gallery-14.jpg" alt="Foto portofolio wedding LUMINEXA 14">
         </button>
-        <button class="gallery-card" type="button" data-photo="gallery-15.jpg" aria-label="Perbesar foto portofolio 15">
+        <button class="gallery-card" type="button" data-category="portrait" data-photo="gallery-15.jpg" aria-label="Perbesar foto portofolio 15">
           <img loading="lazy" src="gallery-15.jpg" alt="Foto portofolio wedding LUMINEXA 15">
         </button>
-        <button class="gallery-card" type="button" data-photo="gallery-16.jpg" aria-label="Perbesar foto portofolio 16">
+        <button class="gallery-card" type="button" data-category="portrait" data-photo="gallery-16.jpg" aria-label="Perbesar foto portofolio 16">
           <img loading="lazy" src="gallery-16.jpg" alt="Foto portofolio wedding LUMINEXA 16">
         </button>
-        <button class="gallery-card" type="button" data-photo="gallery-17.jpg" aria-label="Perbesar foto portofolio 17">
+        <button class="gallery-card" type="button" data-category="behind" data-photo="gallery-17.jpg" aria-label="Perbesar foto portofolio 17">
           <img loading="lazy" src="gallery-17.jpg" alt="Foto portofolio wedding LUMINEXA 17">
         </button>
-        <button class="gallery-card" type="button" data-photo="gallery-18.jpg" aria-label="Perbesar foto portofolio 18">
+        <button class="gallery-card" type="button" data-category="behind" data-photo="gallery-18.jpg" aria-label="Perbesar foto portofolio 18">
           <img loading="lazy" src="gallery-18.jpg" alt="Foto portofolio wedding LUMINEXA 18">
         </button>
-        <button class="gallery-card" type="button" data-photo="gallery-19.jpg" aria-label="Perbesar foto portofolio 19">
+        <button class="gallery-card" type="button" data-category="portrait" data-photo="gallery-19.jpg" aria-label="Perbesar foto portofolio 19">
           <img loading="lazy" src="gallery-19.jpg" alt="Foto portofolio wedding LUMINEXA 19">
         </button>
-        <button class="gallery-card" type="button" data-photo="gallery-20.jpg" aria-label="Perbesar foto portofolio 20">
+        <button class="gallery-card" type="button" data-category="outdoor" data-photo="gallery-20.jpg" aria-label="Perbesar foto portofolio 20">
           <img loading="lazy" src="gallery-20.jpg" alt="Foto portofolio wedding LUMINEXA 20">
         </button>
-        <button class="gallery-card" type="button" data-photo="gallery-21.jpg" aria-label="Perbesar foto portofolio 21">
+        <button class="gallery-card" type="button" data-category="details" data-photo="gallery-21.jpg" aria-label="Perbesar foto portofolio 21">
           <img loading="lazy" src="gallery-21.jpg" alt="Foto portofolio wedding LUMINEXA 21">
         </button>
-        <button class="gallery-card" type="button" data-photo="gallery-22.jpg" aria-label="Perbesar foto portofolio 22">
+        <button class="gallery-card" type="button" data-category="outdoor" data-photo="gallery-22.jpg" aria-label="Perbesar foto portofolio 22">
           <img loading="lazy" src="gallery-22.jpg" alt="Foto portofolio wedding LUMINEXA 22">
         </button>
-        <button class="gallery-card" type="button" data-photo="gallery-23.jpg" aria-label="Perbesar foto portofolio 23">
+        <button class="gallery-card" type="button" data-category="portrait" data-photo="gallery-23.jpg" aria-label="Perbesar foto portofolio 23">
           <img loading="lazy" src="gallery-23.jpg" alt="Foto portofolio wedding LUMINEXA 23">
         </button>
-        <button class="gallery-card" type="button" data-photo="gallery-24.jpg" aria-label="Perbesar foto portofolio 24">
+        <button class="gallery-card" type="button" data-category="portrait" data-photo="gallery-24.jpg" aria-label="Perbesar foto portofolio 24">
           <img loading="lazy" src="gallery-24.jpg" alt="Foto portofolio wedding LUMINEXA 24">
         </button>
-        <button class="gallery-card" type="button" data-photo="gallery-25.jpg" aria-label="Perbesar foto portofolio 25">
+        <button class="gallery-card" type="button" data-category="portrait" data-photo="gallery-25.jpg" aria-label="Perbesar foto portofolio 25">
           <img loading="lazy" src="gallery-25.jpg" alt="Foto portofolio wedding LUMINEXA 25">
         </button>
-        <button class="gallery-card" type="button" data-photo="gallery-26.jpg" aria-label="Perbesar foto portofolio 26">
+        <button class="gallery-card" type="button" data-category="portrait" data-photo="gallery-26.jpg" aria-label="Perbesar foto portofolio 26">
           <img loading="lazy" src="gallery-26.jpg" alt="Foto portofolio wedding LUMINEXA 26">
         </button>
-        <button class="gallery-card" type="button" data-photo="gallery-27.jpg" aria-label="Perbesar foto portofolio 27">
+        <button class="gallery-card" type="button" data-category="portrait" data-photo="gallery-27.jpg" aria-label="Perbesar foto portofolio 27">
           <img loading="lazy" src="gallery-27.jpg" alt="Foto portofolio wedding LUMINEXA 27">
         </button>
-        <button class="gallery-card" type="button" data-photo="gallery-28.jpg" aria-label="Perbesar foto portofolio 28">
+        <button class="gallery-card" type="button" data-category="portrait" data-photo="gallery-28.jpg" aria-label="Perbesar foto portofolio 28">
           <img loading="lazy" src="gallery-28.jpg" alt="Foto portofolio wedding LUMINEXA 28">
         </button>
-        <button class="gallery-card" type="button" data-photo="gallery-29.jpg" aria-label="Perbesar foto portofolio 29">
+        <button class="gallery-card" type="button" data-category="behind" data-photo="gallery-29.jpg" aria-label="Perbesar foto portofolio 29">
           <img loading="lazy" src="gallery-29.jpg" alt="Foto portofolio wedding LUMINEXA 29">
         </button>
-        <button class="gallery-card" type="button" data-photo="gallery-30.jpg" aria-label="Perbesar foto portofolio 30">
+        <button class="gallery-card" type="button" data-category="portrait" data-photo="gallery-30.jpg" aria-label="Perbesar foto portofolio 30">
           <img loading="lazy" src="gallery-30.jpg" alt="Foto portofolio wedding LUMINEXA 30">
         </button>
-        <button class="gallery-card" type="button" data-photo="gallery-31.jpg" aria-label="Perbesar foto portofolio 31">
+        <button class="gallery-card" type="button" data-category="portrait" data-photo="gallery-31.jpg" aria-label="Perbesar foto portofolio 31">
           <img loading="lazy" src="gallery-31.jpg" alt="Foto portofolio wedding LUMINEXA 31">
         </button>
-        <button class="gallery-card" type="button" data-photo="gallery-32.jpg" aria-label="Perbesar foto portofolio 32">
+        <button class="gallery-card" type="button" data-category="details" data-photo="gallery-32.jpg" aria-label="Perbesar foto portofolio 32">
           <img loading="lazy" src="gallery-32.jpg" alt="Foto portofolio wedding LUMINEXA 32">
         </button>
-        <button class="gallery-card" type="button" data-photo="gallery-33.jpg" aria-label="Perbesar foto portofolio 33">
+        <button class="gallery-card" type="button" data-category="family" data-photo="gallery-33.jpg" aria-label="Perbesar foto portofolio 33">
           <img loading="lazy" src="gallery-33.jpg" alt="Foto portofolio wedding LUMINEXA 33">
         </button>
-        <button class="gallery-card" type="button" data-photo="gallery-34.jpg" aria-label="Perbesar foto portofolio 34">
+        <button class="gallery-card" type="button" data-category="details" data-photo="gallery-34.jpg" aria-label="Perbesar foto portofolio 34">
           <img loading="lazy" src="gallery-34.jpg" alt="Foto portofolio wedding LUMINEXA 34">
         </button>
-        <button class="gallery-card" type="button" data-photo="gallery-35.jpg" aria-label="Perbesar foto portofolio 35">
+        <button class="gallery-card" type="button" data-category="outdoor" data-photo="gallery-35.jpg" aria-label="Perbesar foto portofolio 35">
           <img loading="lazy" src="gallery-35.jpg" alt="Foto portofolio wedding LUMINEXA 35">
         </button>
-        <button class="gallery-card" type="button" data-photo="gallery-36.jpg" aria-label="Perbesar foto portofolio 36">
+        <button class="gallery-card" type="button" data-category="details" data-photo="gallery-36.jpg" aria-label="Perbesar foto portofolio 36">
           <img loading="lazy" src="gallery-36.jpg" alt="Foto portofolio wedding LUMINEXA 36">
         </button>
       </div>
-      <div class="gallery-count">36 photographs · LUMINEXA portfolio</div>
+      <div class="gallery-count" id="galleryCount" aria-live="polite">Showing 36 photographs · LUMINEXA portfolio</div>
     </div>
   </section>
   <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Tampilan foto">
@@ -213,6 +228,28 @@
   links.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>links.classList.remove('open')));
   document.getElementById('year').textContent=new Date().getFullYear();
 
+
+  const filterButtons=document.querySelectorAll('.filter-btn');
+  const galleryCards=document.querySelectorAll('.gallery-card');
+  const galleryCount=document.getElementById('galleryCount');
+  filterButtons.forEach(button=>{
+    button.addEventListener('click',()=>{
+      const filter=button.dataset.filter;
+      let visible=0;
+      filterButtons.forEach(item=>{
+        const active=item===button;
+        item.classList.toggle('active',active);
+        item.setAttribute('aria-pressed',String(active));
+      });
+      galleryCards.forEach(card=>{
+        const show=filter==='all'||card.dataset.category===filter;
+        card.hidden=!show;
+        if(show) visible++;
+      });
+      galleryCount.textContent=`Showing ${visible} photographs · LUMINEXA portfolio`;
+    });
+  });
+
   const lightbox=document.getElementById('lightbox');
   const lightboxImage=document.getElementById('lightboxImage');
   const closeLightbox=()=>{lightbox.classList.remove('open');lightboxImage.src='';document.body.style.overflow='';};
@@ -230,4 +267,4 @@
 
 </script>
 </body>
-</html>
+  </html>
