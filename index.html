@@ -15,6 +15,23 @@
     header{position:absolute;z-index:5;top:0;left:0;width:100%;border-bottom:1px solid rgba(255,255,255,.12)}.nav{height:82px;display:flex;align-items:center;justify-content:space-between}.brand{font-family:var(--serif);font-size:1.55rem;letter-spacing:.16em}.brand small{display:block;font:500 .52rem var(--sans);letter-spacing:.28em;color:var(--gold);text-align:center;margin-top:-3px}.navlinks{display:flex;gap:30px;font-size:.68rem;letter-spacing:.13em;text-transform:uppercase;color:#ddd5c9}.navlinks a:hover{color:var(--gold)}.menu{display:none;background:none;border:1px solid var(--line);color:var(--cream);padding:8px 12px}
     .hero{min-height:760px;height:100svh;max-height:960px;position:relative;display:flex;align-items:center;background:linear-gradient(90deg,rgba(12,11,10,.88) 0%,rgba(12,11,10,.52) 48%,rgba(12,11,10,.12) 100%),linear-gradient(0deg,rgba(12,11,10,.55),transparent 45%),url('hero-luminexa.jpg') center 42%/cover}.hero-content{padding-top:70px;max-width:650px}.hero .eyebrow{margin-bottom:24px}.hero h1{font:400 clamp(3.5rem,8vw,7.4rem)/.99 var(--serif);letter-spacing:-.045em;margin:0 0 26px}.hero h1 em{color:#d4b994;font-weight:400}.hero p{max-width:420px;color:#ded6ca;font-size:.94rem;margin:0 0 34px}.scroll-note{position:absolute;bottom:34px;left:50%;transform:translateX(-50%);font-size:.6rem;letter-spacing:.22em;text-transform:uppercase;color:#d6cabc;display:flex;align-items:center;gap:14px}.scroll-note:before{content:"";width:42px;height:1px;background:var(--gold)}
     section{padding:112px 0}.section-head{display:flex;justify-content:space-between;align-items:end;gap:24px;margin-bottom:42px}.section-head h2{font:400 clamp(2.6rem,5vw,4.5rem)/1.05 var(--serif);margin:12px 0 0;letter-spacing:-.035em}.section-head p{max-width:340px;color:var(--muted);font-size:.86rem;margin:0}.gallery{display:grid;grid-template-columns:1.1fr .9fr;gap:22px}.gallery-main{height:650px;position:relative;overflow:hidden}.gallery-side{display:grid;grid-template-rows:1fr 1fr;gap:22px}.gallery-side figure{height:314px}.gallery figure{margin:0;position:relative;background:#292521}.gallery img{transition:transform .7s}.gallery figure:hover img{transform:scale(1.035)}.caption{position:absolute;bottom:0;left:0;right:0;padding:35px 24px 20px;background:linear-gradient(transparent,rgba(0,0,0,.7));font:400 1.5rem var(--serif)}
+
+    .full-gallery{background:#11100f}
+    .full-gallery .section-head{margin-bottom:38px}
+    .gallery-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px}
+    .gallery-card{position:relative;display:block;padding:0;border:0;background:#211e1a;overflow:hidden;cursor:pointer;aspect-ratio:4/5;text-align:left}
+    .gallery-card img{width:100%;height:100%;object-fit:cover;transition:transform .65s,opacity .35s}
+    .gallery-card:hover img{transform:scale(1.055);opacity:.78}
+    .gallery-card:after{content:"VIEW PHOTO ↗";position:absolute;left:14px;bottom:13px;color:#fff;font:500 .58rem var(--sans);letter-spacing:.18em;text-shadow:0 1px 8px #000;opacity:0;transition:opacity .25s}
+    .gallery-card:hover:after,.gallery-card:focus-visible:after{opacity:1}
+    .gallery-count{color:var(--gold);font-size:.68rem;letter-spacing:.2em;text-transform:uppercase;margin-top:22px}
+    .lightbox{position:fixed;inset:0;z-index:20;background:rgba(8,7,6,.96);display:none;align-items:center;justify-content:center;padding:22px}
+    .lightbox.open{display:flex}
+    .lightbox img{width:auto;height:auto;max-width:min(92vw,1200px);max-height:86vh;object-fit:contain}
+    .lightbox-close{position:absolute;top:18px;right:20px;width:44px;height:44px;border:1px solid rgba(255,255,255,.35);background:transparent;color:#fff;font-size:1.6rem;cursor:pointer}
+    .lightbox-label{position:absolute;bottom:18px;left:0;right:0;text-align:center;color:#c7b99d;font-size:.62rem;letter-spacing:.2em;text-transform:uppercase}
+    @media(max-width:760px){.gallery-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:9px}.gallery-card{aspect-ratio:3/4}.lightbox{padding:12px}.lightbox img{max-width:96vw;max-height:82vh}}
+
     .about{background:var(--panel)}.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:90px;align-items:center}.about-image{height:610px;position:relative}.about-image:after{content:"";position:absolute;inset:18px -18px -18px 18px;border:1px solid rgba(185,155,112,.45);z-index:0}.about-image img{position:relative;z-index:1}.about-copy h2{font:400 clamp(2.8rem,5vw,4.7rem)/1.08 var(--serif);margin:16px 0 24px}.about-copy h2 em{color:var(--gold)}.about-copy p{color:var(--muted);font-size:.9rem;max-width:480px}.signature{font:italic 1.7rem var(--serif);color:var(--gold);margin-top:30px}
     .services-grid{display:grid;grid-template-columns:repeat(3,1fr);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}.service{padding:34px 28px 38px 0;border-right:1px solid var(--line)}.service+ .service{padding-left:28px}.service:last-child{border:0}.number{font:italic 1rem var(--serif);color:var(--gold)}.service h3{font:400 1.8rem var(--serif);margin:25px 0 12px}.service p{font-size:.82rem;color:var(--muted);max-width:290px}
     .quote{padding:100px 0;background:#171512;text-align:center}.quote blockquote{font:400 clamp(2rem,4.5vw,4rem)/1.2 var(--serif);max-width:850px;margin:18px auto 24px}.quote blockquote em{color:var(--gold)}.quote p{font-size:.65rem;letter-spacing:.2em;text-transform:uppercase;color:var(--muted)}
@@ -26,7 +43,7 @@
 <body>
 <header><div class="wrap nav">
   <a class="brand" href="#home">LUMINEXA<small>WEDDING PHOTOGRAPHY</small></a>
-  <nav class="navlinks" id="navlinks"><a href="#stories">Stories</a><a href="#about">Our Approach</a><a href="#services">Services</a><a href="#contact">Contact</a></nav>
+  <nav class="navlinks" id="navlinks"><a href="#stories">Stories</a><a href="#full-gallery">Gallery</a><a href="#about">Our Approach</a><a href="#services">Services</a><a href="#contact">Contact</a></nav>
   <button class="menu" id="menu" aria-label="Buka menu">MENU</button>
 </div></header>
 <main>
@@ -46,6 +63,131 @@
       </div>
     </div>
   </div></section>
+
+  <section class="full-gallery" id="full-gallery">
+    <div class="wrap">
+      <div class="section-head">
+        <div><div class="eyebrow">The complete collection</div><h2 class="serif">Our <em>Gallery.</em></h2></div>
+        <p>Setiap foto menyimpan cerita. Jelajahi koleksi momen yang kami abadikan melalui lensa LUMINEXA.</p>
+      </div>
+      <div class="gallery-grid">
+        <button class="gallery-card" type="button" data-photo="gallery-01.jpg" aria-label="Perbesar foto portofolio 01">
+          <img loading="lazy" src="gallery-01.jpg" alt="Foto portofolio wedding LUMINEXA 01">
+        </button>
+        <button class="gallery-card" type="button" data-photo="gallery-02.jpg" aria-label="Perbesar foto portofolio 02">
+          <img loading="lazy" src="gallery-02.jpg" alt="Foto portofolio wedding LUMINEXA 02">
+        </button>
+        <button class="gallery-card" type="button" data-photo="gallery-03.jpg" aria-label="Perbesar foto portofolio 03">
+          <img loading="lazy" src="gallery-03.jpg" alt="Foto portofolio wedding LUMINEXA 03">
+        </button>
+        <button class="gallery-card" type="button" data-photo="gallery-04.jpg" aria-label="Perbesar foto portofolio 04">
+          <img loading="lazy" src="gallery-04.jpg" alt="Foto portofolio wedding LUMINEXA 04">
+        </button>
+        <button class="gallery-card" type="button" data-photo="gallery-05.jpg" aria-label="Perbesar foto portofolio 05">
+          <img loading="lazy" src="gallery-05.jpg" alt="Foto portofolio wedding LUMINEXA 05">
+        </button>
+        <button class="gallery-card" type="button" data-photo="gallery-06.jpg" aria-label="Perbesar foto portofolio 06">
+          <img loading="lazy" src="gallery-06.jpg" alt="Foto portofolio wedding LUMINEXA 06">
+        </button>
+        <button class="gallery-card" type="button" data-photo="gallery-07.jpg" aria-label="Perbesar foto portofolio 07">
+          <img loading="lazy" src="gallery-07.jpg" alt="Foto portofolio wedding LUMINEXA 07">
+        </button>
+        <button class="gallery-card" type="button" data-photo="gallery-08.jpg" aria-label="Perbesar foto portofolio 08">
+          <img loading="lazy" src="gallery-08.jpg" alt="Foto portofolio wedding LUMINEXA 08">
+        </button>
+        <button class="gallery-card" type="button" data-photo="gallery-09.jpg" aria-label="Perbesar foto portofolio 09">
+          <img loading="lazy" src="gallery-09.jpg" alt="Foto portofolio wedding LUMINEXA 09">
+        </button>
+        <button class="gallery-card" type="button" data-photo="gallery-10.jpg" aria-label="Perbesar foto portofolio 10">
+          <img loading="lazy" src="gallery-10.jpg" alt="Foto portofolio wedding LUMINEXA 10">
+        </button>
+        <button class="gallery-card" type="button" data-photo="gallery-11.jpg" aria-label="Perbesar foto portofolio 11">
+          <img loading="lazy" src="gallery-11.jpg" alt="Foto portofolio wedding LUMINEXA 11">
+        </button>
+        <button class="gallery-card" type="button" data-photo="gallery-12.jpg" aria-label="Perbesar foto portofolio 12">
+          <img loading="lazy" src="gallery-12.jpg" alt="Foto portofolio wedding LUMINEXA 12">
+        </button>
+        <button class="gallery-card" type="button" data-photo="gallery-13.jpg" aria-label="Perbesar foto portofolio 13">
+          <img loading="lazy" src="gallery-13.jpg" alt="Foto portofolio wedding LUMINEXA 13">
+        </button>
+        <button class="gallery-card" type="button" data-photo="gallery-14.jpg" aria-label="Perbesar foto portofolio 14">
+          <img loading="lazy" src="gallery-14.jpg" alt="Foto portofolio wedding LUMINEXA 14">
+        </button>
+        <button class="gallery-card" type="button" data-photo="gallery-15.jpg" aria-label="Perbesar foto portofolio 15">
+          <img loading="lazy" src="gallery-15.jpg" alt="Foto portofolio wedding LUMINEXA 15">
+        </button>
+        <button class="gallery-card" type="button" data-photo="gallery-16.jpg" aria-label="Perbesar foto portofolio 16">
+          <img loading="lazy" src="gallery-16.jpg" alt="Foto portofolio wedding LUMINEXA 16">
+        </button>
+        <button class="gallery-card" type="button" data-photo="gallery-17.jpg" aria-label="Perbesar foto portofolio 17">
+          <img loading="lazy" src="gallery-17.jpg" alt="Foto portofolio wedding LUMINEXA 17">
+        </button>
+        <button class="gallery-card" type="button" data-photo="gallery-18.jpg" aria-label="Perbesar foto portofolio 18">
+          <img loading="lazy" src="gallery-18.jpg" alt="Foto portofolio wedding LUMINEXA 18">
+        </button>
+        <button class="gallery-card" type="button" data-photo="gallery-19.jpg" aria-label="Perbesar foto portofolio 19">
+          <img loading="lazy" src="gallery-19.jpg" alt="Foto portofolio wedding LUMINEXA 19">
+        </button>
+        <button class="gallery-card" type="button" data-photo="gallery-20.jpg" aria-label="Perbesar foto portofolio 20">
+          <img loading="lazy" src="gallery-20.jpg" alt="Foto portofolio wedding LUMINEXA 20">
+        </button>
+        <button class="gallery-card" type="button" data-photo="gallery-21.jpg" aria-label="Perbesar foto portofolio 21">
+          <img loading="lazy" src="gallery-21.jpg" alt="Foto portofolio wedding LUMINEXA 21">
+        </button>
+        <button class="gallery-card" type="button" data-photo="gallery-22.jpg" aria-label="Perbesar foto portofolio 22">
+          <img loading="lazy" src="gallery-22.jpg" alt="Foto portofolio wedding LUMINEXA 22">
+        </button>
+        <button class="gallery-card" type="button" data-photo="gallery-23.jpg" aria-label="Perbesar foto portofolio 23">
+          <img loading="lazy" src="gallery-23.jpg" alt="Foto portofolio wedding LUMINEXA 23">
+        </button>
+        <button class="gallery-card" type="button" data-photo="gallery-24.jpg" aria-label="Perbesar foto portofolio 24">
+          <img loading="lazy" src="gallery-24.jpg" alt="Foto portofolio wedding LUMINEXA 24">
+        </button>
+        <button class="gallery-card" type="button" data-photo="gallery-25.jpg" aria-label="Perbesar foto portofolio 25">
+          <img loading="lazy" src="gallery-25.jpg" alt="Foto portofolio wedding LUMINEXA 25">
+        </button>
+        <button class="gallery-card" type="button" data-photo="gallery-26.jpg" aria-label="Perbesar foto portofolio 26">
+          <img loading="lazy" src="gallery-26.jpg" alt="Foto portofolio wedding LUMINEXA 26">
+        </button>
+        <button class="gallery-card" type="button" data-photo="gallery-27.jpg" aria-label="Perbesar foto portofolio 27">
+          <img loading="lazy" src="gallery-27.jpg" alt="Foto portofolio wedding LUMINEXA 27">
+        </button>
+        <button class="gallery-card" type="button" data-photo="gallery-28.jpg" aria-label="Perbesar foto portofolio 28">
+          <img loading="lazy" src="gallery-28.jpg" alt="Foto portofolio wedding LUMINEXA 28">
+        </button>
+        <button class="gallery-card" type="button" data-photo="gallery-29.jpg" aria-label="Perbesar foto portofolio 29">
+          <img loading="lazy" src="gallery-29.jpg" alt="Foto portofolio wedding LUMINEXA 29">
+        </button>
+        <button class="gallery-card" type="button" data-photo="gallery-30.jpg" aria-label="Perbesar foto portofolio 30">
+          <img loading="lazy" src="gallery-30.jpg" alt="Foto portofolio wedding LUMINEXA 30">
+        </button>
+        <button class="gallery-card" type="button" data-photo="gallery-31.jpg" aria-label="Perbesar foto portofolio 31">
+          <img loading="lazy" src="gallery-31.jpg" alt="Foto portofolio wedding LUMINEXA 31">
+        </button>
+        <button class="gallery-card" type="button" data-photo="gallery-32.jpg" aria-label="Perbesar foto portofolio 32">
+          <img loading="lazy" src="gallery-32.jpg" alt="Foto portofolio wedding LUMINEXA 32">
+        </button>
+        <button class="gallery-card" type="button" data-photo="gallery-33.jpg" aria-label="Perbesar foto portofolio 33">
+          <img loading="lazy" src="gallery-33.jpg" alt="Foto portofolio wedding LUMINEXA 33">
+        </button>
+        <button class="gallery-card" type="button" data-photo="gallery-34.jpg" aria-label="Perbesar foto portofolio 34">
+          <img loading="lazy" src="gallery-34.jpg" alt="Foto portofolio wedding LUMINEXA 34">
+        </button>
+        <button class="gallery-card" type="button" data-photo="gallery-35.jpg" aria-label="Perbesar foto portofolio 35">
+          <img loading="lazy" src="gallery-35.jpg" alt="Foto portofolio wedding LUMINEXA 35">
+        </button>
+        <button class="gallery-card" type="button" data-photo="gallery-36.jpg" aria-label="Perbesar foto portofolio 36">
+          <img loading="lazy" src="gallery-36.jpg" alt="Foto portofolio wedding LUMINEXA 36">
+        </button>
+      </div>
+      <div class="gallery-count">36 photographs · LUMINEXA portfolio</div>
+    </div>
+  </section>
+  <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Tampilan foto">
+    <button class="lightbox-close" id="lightboxClose" aria-label="Tutup foto">×</button>
+    <img id="lightboxImage" src="" alt="Foto portofolio LUMINEXA ukuran besar">
+    <div class="lightbox-label">LUMINEXA · WEDDING PHOTOGRAPHY</div>
+  </div>
   <section class="about" id="about"><div class="wrap about-grid">
     <div class="about-image"><img loading="lazy" src="about-luminexa.jpg" alt="Pasangan pengantin berjalan bersama"></div>
     <div class="about-copy"><div class="eyebrow">The heart behind the lens</div><h2>More than images.<br><em>A feeling that stays.</em></h2><p>LUMINEXA hadir untuk mengabadikan kisah pernikahan dengan pendekatan yang hangat, personal, dan penuh perhatian. Kami percaya, foto terbaik bukan hanya tentang bagaimana sebuah hari terlihat, tetapi juga tentang bagaimana hari itu terasa.</p><p>Dari momen yang paling megah hingga detail kecil yang sering luput, setiap cerita layak dikenang dengan indah.</p><div class="signature">LUMINEXA</div></div>
@@ -70,6 +212,22 @@
   menu.addEventListener('click',()=>links.classList.toggle('open'));
   links.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>links.classList.remove('open')));
   document.getElementById('year').textContent=new Date().getFullYear();
+
+  const lightbox=document.getElementById('lightbox');
+  const lightboxImage=document.getElementById('lightboxImage');
+  const closeLightbox=()=>{lightbox.classList.remove('open');lightboxImage.src='';document.body.style.overflow='';};
+  document.querySelectorAll('.gallery-card').forEach(card=>{
+    card.addEventListener('click',()=>{
+      const photo=card.dataset.photo;
+      lightboxImage.src=photo;
+      lightbox.classList.add('open');
+      document.body.style.overflow='hidden';
+    });
+  });
+  document.getElementById('lightboxClose').addEventListener('click',closeLightbox);
+  lightbox.addEventListener('click',e=>{if(e.target===lightbox)closeLightbox();});
+  document.addEventListener('keydown',e=>{if(e.key==='Escape')closeLightbox();});
+
 </script>
 </body>
 </html>
